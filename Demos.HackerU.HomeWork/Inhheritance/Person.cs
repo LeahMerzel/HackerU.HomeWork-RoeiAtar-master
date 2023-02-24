@@ -31,7 +31,7 @@ namespace Demos.HackerU.HomeWork.Inhheritance
         }
         public void DisplayInfoToConsole()
         {
-            Console.WriteLine($"Person:\nName :{Name}\nAge :{Age}\nCity :{City}\nAddres :{Address}\n");
+            Console.WriteLine($"Person:\nName :{Name}\nAge :{Age}\nCity :{City}\nAddres :{Address}");
         }
     }
 }

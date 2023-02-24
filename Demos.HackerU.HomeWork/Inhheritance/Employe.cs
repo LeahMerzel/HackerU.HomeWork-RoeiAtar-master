@@ -27,8 +27,9 @@ namespace Demos.HackerU.HomeWork.Inhheritance
 
         public new void DisplayInfoToConsole()
         {
-            Console.WriteLine($"\nDepartment : {Department} ,Salery:{Salery}");
             base.DisplayInfoToConsole();
+            Console.WriteLine($"Employe:\nDepartment : {Department} ,Salery:{Salery}\n");
+
         }
 
     }

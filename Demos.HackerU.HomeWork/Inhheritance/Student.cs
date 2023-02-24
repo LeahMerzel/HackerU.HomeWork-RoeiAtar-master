@@ -27,8 +27,9 @@ namespace Demos.HackerU.HomeWork.Inhheritance
 
         public new void DisplayInfoToConsole()
         {
-            Console.WriteLine($"\nStudyClass :{StudyClass} ,Type {studentType}");
             base.DisplayInfoToConsole();
+            Console.WriteLine($"Student:\nStudyClass :{StudyClass} ,Type :{studentType}\n");
+
         }
 
 

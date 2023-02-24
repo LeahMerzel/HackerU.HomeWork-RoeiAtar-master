@@ -22,8 +22,9 @@ namespace Demos.HackerU.HomeWork.Inhheritance
 
         public new void DisplayInfoToConsole()
         {
-            Console.WriteLine($"ShippingAddress :{ShippingAddress}");
             base.DisplayInfoToConsole();
+            Console.WriteLine($"Customer:\nShippingAddress :{ShippingAddress}\n");
+
         }
 
     }

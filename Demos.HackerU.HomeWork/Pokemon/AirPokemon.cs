@@ -23,16 +23,23 @@ namespace Demos.HackerU.HomeWork.Pokemon
 
         public void StormAttackHit(Pokemon otherPokemon)
         {
-            if (AmmunitionPower > 0 || LifePower > 0)
+            if (LifePower <= 0)
             {
-                otherPokemon.LifePower -= 10;
-                StormPower -= 5;
-                LifePower -= 3;
+                Console.WriteLine($"{Name} die");
             }
             else
             {
-                Console.WriteLine("Pokemon can't fight");
+                if (AmmunitionPower <= 0)
+                {
+                    Console.WriteLine("No Ammunition Power");
+                }
+                otherPokemon.LifePower -= 10;
+                StormPower -= 5;
+                LifePower -= 3;
+
             }
+
+            Console.WriteLine($"AirPokemon\nName :{Name}\nLifePower :{LifePower}\nAmmunitionPower :{AmmunitionPower}\n");
         }
 
 

@@ -21,16 +21,22 @@ namespace Demos.HackerU.HomeWork.Pokemon
         }
         public void WoodsAttackHit(Pokemon otherPokemon)
         {
-            if (AmmunitionPower > 0 || LifePower > 0)
+            if (LifePower <= 0)
             {
-                otherPokemon.LifePower -= 8;
-                WoodsPower -= 3;
-                LifePower -= 2;
+                Console.WriteLine($"{Name} die");
             }
             else
             {
-                Console.WriteLine("Pokemon can't fight");
+                if (AmmunitionPower <= 0)
+                {
+                    Console.WriteLine("No Ammunition Power");
+                }
+                otherPokemon.LifePower -= 8;
+                WoodsPower -= 3;
+                LifePower -= 2;
+
             }
+            Console.WriteLine($"ForestPokemon\nName :{Name}\nLifePower :{LifePower}\nAmmunitionPower :{AmmunitionPower}\n");
         }
 
 

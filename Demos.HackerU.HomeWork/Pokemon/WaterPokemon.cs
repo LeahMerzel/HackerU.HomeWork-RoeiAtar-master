@@ -10,6 +10,7 @@ namespace Demos.HackerU.HomeWork.Pokemon
     {
         public int ElectricPower = 20;
 
+
         public WaterPokemon() : base()
         {
             ElectricPower = 20;
@@ -23,16 +24,22 @@ namespace Demos.HackerU.HomeWork.Pokemon
 
         public void ElectricAttackHit(Pokemon otherPokemon)
         {
-            if (AmmunitionPower > 0 || LifePower > 0)
+            if (LifePower <= 0)
             {
-                otherPokemon.LifePower -= 20;
-                ElectricPower -= 8;
-                LifePower -= 4;
+                Console.WriteLine($"{Name} die");
             }
             else
             {
-                Console.WriteLine("Pokemon can't fight");
+                if (AmmunitionPower <= 0)
+                {
+                    Console.WriteLine("No Ammunition Power");
+                }
+                otherPokemon.LifePower -= 20;
+                ElectricPower -= 8;
+                LifePower -= 4;
+
             }
+            Console.WriteLine($"WaterPokemon\nName :{Name}\nLifePower :{LifePower}\nAmmunitionPower :{AmmunitionPower}\n");
 
         }
 

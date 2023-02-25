@@ -49,7 +49,7 @@ namespace Demos.HackerU.HomeWork.Pokemon
                 }
                 otherPokemon.LifePower -= 5;
                 AmmunitionPower -= ammunitionPower;
-                Console.WriteLine($"WaterPokemon\nName :{Name}\nLifePower :{LifePower}\nAmmunitionPower :{AmmunitionPower}\n");
+                Console.WriteLine($"Pokemon Attack\nName :{Name}\nLifePower :{LifePower}\nAmmunitionPower :{AmmunitionPower}\n");
             }
 
 

@@ -12,6 +12,7 @@ namespace Demos.HackerU.HomeWork
         public static void Run()
         {
             #region Q1;
+
             Person p1 = new Person("markez barnea", "Ashkelon", 35, "Roei Atar");
             p1.DisplayInfoToConsole();
             Customer c1 = new Customer("Maale agat", "markez barnea", 35, "Ashkelon", "Roei Atar");
@@ -46,10 +47,15 @@ namespace Demos.HackerU.HomeWork
 
             }
             Console.WriteLine("____________________");
-            p1.Age = 10;
-            p1.Address = "new address";
-            p1.City = "New City";
-            p1.DisplayInfoToConsole();
+
+
+
+            Customer c2 = new Customer();
+            c2.Age = 10;
+            c2.Address = "new address";
+            c2.City = "New City";
+            c2.ShippingAddress = "dfsfsd sdfsd  ";
+            c2.DisplayInfoToConsole();
 
             #endregion
 

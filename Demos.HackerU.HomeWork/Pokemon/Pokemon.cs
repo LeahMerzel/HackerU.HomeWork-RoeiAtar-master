@@ -31,6 +31,7 @@ namespace Demos.HackerU.HomeWork.Pokemon
 
         public void Attack(Pokemon OtherPokemon, int ammunitionPower)
         {
+            OtherPokemon.LifePower -= 5;
 
         }
     }

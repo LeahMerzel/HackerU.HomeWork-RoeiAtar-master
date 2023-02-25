@@ -8,15 +8,15 @@ namespace Demos.HackerU.HomeWork.Pokemon
 {
     public class WaterPokemon : Pokemon
     {
-        public int ElectricPower;
+        public int ElectricPower = 20;
 
         public WaterPokemon() : base()
         {
-            ElectricPower = 0;
+            ElectricPower = 20;
 
         }
 
-        public WaterPokemon(int electricPower) : base()
+        public WaterPokemon(int electricPower, string id, string name, int lifePower, int ammunitionPower) : base(id, name, lifePower, ammunitionPower)
         {
             ElectricPower = electricPower;
         }

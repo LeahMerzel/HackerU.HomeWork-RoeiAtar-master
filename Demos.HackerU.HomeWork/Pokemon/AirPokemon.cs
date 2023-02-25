@@ -9,14 +9,14 @@ namespace Demos.HackerU.HomeWork.Pokemon
     public class AirPokemon : Pokemon
     {
 
-        public int StormPower;
+        public int StormPower = 25;
 
         public AirPokemon() : base()
         {
-            StormPower = 0;
+            StormPower = 25;
         }
 
-        public AirPokemon(int stormPower) : base()
+        public AirPokemon(int stormPower, string id, string name, int lifePower, int ammunitionPower) : base(id, name, lifePower, ammunitionPower)
         {
             StormPower = stormPower;
         }

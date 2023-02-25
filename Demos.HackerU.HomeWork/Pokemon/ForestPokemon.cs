@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nest;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,18 +9,16 @@ namespace Demos.HackerU.HomeWork.Pokemon
 {
     public class ForestPokemon : Pokemon
     {
-        public int WoodsPower;
+        public int WoodsPower = 30;
 
         public ForestPokemon() : base()
         {
-            WoodsPower = 0;
+            WoodsPower = 30;
         }
-
-        public ForestPokemon(int woodsPower) : base()
+        public ForestPokemon(int woodsPower, string id, string name, int lifePower, int ammunitionPower) : base(id, name, lifePower, ammunitionPower)
         {
             WoodsPower = woodsPower;
         }
-
         public void WoodsAttackHit(Pokemon OtherPokemon)
         {
 

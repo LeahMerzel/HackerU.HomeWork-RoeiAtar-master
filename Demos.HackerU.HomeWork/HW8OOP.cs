@@ -93,10 +93,10 @@ namespace Demos.HackerU.HomeWork
 
             for (int i = 0; i < pockForest.LifePower; i++)
             {
-                pockForest.WoodsAttackHit(pokeWater);
+                //pockForest.WoodsAttackHit(pokeWater);
                 pokeWater.ElectricAttackHit(pockForest);
-                pockForest.Attack(pokeWater, 5);
-                pokeWater.Attack(pockForest, 7);
+                //pockForest.Attack(pokeWater, 5);
+                //pokeWater.Attack(pockForest, 7);
             }
 
 

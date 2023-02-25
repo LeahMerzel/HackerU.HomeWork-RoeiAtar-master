@@ -31,15 +31,21 @@ namespace Demos.HackerU.HomeWork.Pokemon
 
         public void Attack(Pokemon otherPokemon, int ammunitionPower)
         {
-            if (AmmunitionPower > 0 || LifePower > 0)
+            if (LifePower <= 0)
             {
-                otherPokemon.LifePower -= 5;
-                AmmunitionPower -= ammunitionPower;
+                Console.WriteLine($"{Name} die");
             }
             else
             {
-                Console.WriteLine("Pokemon can't fight");
+                if (AmmunitionPower <= 0)
+                {
+                    Console.WriteLine("No Ammunition Power");
+                }
+                otherPokemon.LifePower -= 5;
+                AmmunitionPower -= ammunitionPower;
+
             }
+            Console.WriteLine($"WaterPokemon\nName :{Name}\nLifePower :{LifePower}\nAmmunitionPower :{AmmunitionPower}\n");
 
         }
     }

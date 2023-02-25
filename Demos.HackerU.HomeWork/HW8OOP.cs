@@ -17,9 +17,9 @@ namespace Demos.HackerU.HomeWork
 
 
             Person p1 = new Person("markez barnea", "Ashkelon", 35, "Roei Atar");
-            Customer c1 = new Customer("Maale agat", "markez barnea", 35, "Ashkelon", "Roei Atar");
+            Customer c1 = new Customer("Maale agat", "markez barnea", 35, "Ashkelon", "itay elhanaty");
             Employe e1 = new Employe("Software", 15000, "Maale agat St", 32, "Ashkelon", "Matan Gayda");
-            Student s1 = new Student("A2 Software", "Atotahim 5", 25, "Netanya", "Matan", StudentType.ComputerScience);
+            Student s1 = new Student("A2 Software", "Atotahim 5", 25, "Netanya", "Oren Leshem", StudentType.ComputerScience);
 
             p1.DisplayInfoToConsole();
             Console.WriteLine("");
@@ -29,6 +29,16 @@ namespace Demos.HackerU.HomeWork
             Console.WriteLine("____________________");
 
             Person[] Person = { p1, c1, e1, s1 };
+
+            foreach (Person index in Person)
+            {
+
+                index.DisplayInfoToConsole();
+                Console.WriteLine("\n");
+
+            }
+
+            Console.WriteLine("____________________");
 
             foreach (Person index in Person)
             {
@@ -76,6 +86,7 @@ namespace Demos.HackerU.HomeWork
             pokeAir.Id = "1002";
             pokeAir.Name = "Pidgeot";
 
+            Console.WriteLine($"Fight {pokeWater.Name} vs {pokeAir.Name}\n");
             pokeAir.StormAttackHit(pokeWater);
             pokeWater.ElectricAttackHit(pokeAir);
             pokeAir.Attack(pokeWater, 5);
@@ -85,19 +96,19 @@ namespace Demos.HackerU.HomeWork
             pockForest.Id = "1003";
             pockForest.Name = "Bulbasaur";
 
-
+            Console.WriteLine($"Fight {pockForest.Name} vs {pokeWater.Name}\n");
             pockForest.WoodsAttackHit(pokeWater);
             pokeWater.ElectricAttackHit(pockForest);
             pockForest.Attack(pokeWater, 5);
             pokeWater.Attack(pockForest, 7);
 
-            for (int i = 0; i < 4; i++)
-            {
-                pockForest.WoodsAttackHit(pokeWater);
-                pokeWater.ElectricAttackHit(pockForest);
-                pockForest.Attack(pokeWater, 5);
-                pokeWater.Attack(pockForest, 7);
-            }
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    pockForest.WoodsAttackHit(pokeWater);
+            //    pokeWater.ElectricAttackHit(pockForest);
+            //    pockForest.Attack(pokeWater, 5);
+            //    pokeWater.Attack(pockForest, 7);
+            //}
 
         }
         #endregion

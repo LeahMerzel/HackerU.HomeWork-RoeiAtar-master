@@ -31,6 +31,8 @@ namespace Demos.HackerU
 
             //CategoryOOP.Run();
 
+            HW8OOP.Run();
+
             //--WAIT FOR USER PRESS ANY KEY--
             Console.ReadKey();
         }

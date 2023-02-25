@@ -9,29 +9,29 @@ namespace Demos.HackerU.HomeWork.Inhheritance
     public class Person
     {
 
-        public string Addres;
+        public string Address;
         public string Name;
         public int Age;
         public string City;
 
         public Person()
         {
-            Addres = "No Addres";
+            Address = "No Addres";
             Name = "No Name";
             Age = 0;
             City = "No City";
         }
 
-        public Person(string addres, string name, int age, string city)
+        public Person(string address, string name, int age, string city)
         {
-            Addres = addres;
+            Address = address;
             Name = name;
             Age = age;
             City = city;
         }
         public void DisplayInfoToConsole()
         {
-            Console.WriteLine($"Name :{Name}\nAge :{Age}\nCity :{City}\nAddres :{Addres}");
+            Console.WriteLine($"Person:\nName :{Name}\nAge :{Age}\nCity :{City}\nAddres :{Address}\n");
         }
     }
 }

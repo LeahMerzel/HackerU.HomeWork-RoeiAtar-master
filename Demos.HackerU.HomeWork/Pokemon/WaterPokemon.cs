@@ -26,7 +26,11 @@ namespace Demos.HackerU.HomeWork.Pokemon
         {
             if (LifePower <= 0)
             {
-                Console.WriteLine($"{Name} die");
+                Console.WriteLine($"******{Name} die!*******\n");
+            }
+            else if (otherPokemon.LifePower <= 0)
+            {
+                Console.WriteLine($"******{Name} win!*******\n");
             }
             else
             {
@@ -34,6 +38,8 @@ namespace Demos.HackerU.HomeWork.Pokemon
                 {
                     Console.WriteLine("No Ammunition Power");
                 }
+
+
                 otherPokemon.LifePower -= 20;
                 ElectricPower -= 8;
                 LifePower -= 4;

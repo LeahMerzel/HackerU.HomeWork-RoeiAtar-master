@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using Demos.HackerU.HomeWork.Inhheritance;
@@ -102,13 +103,13 @@ namespace Demos.HackerU.HomeWork
             pockForest.Attack(pokeWater, 5);
             pokeWater.Attack(pockForest, 7);
 
-            //for (int i = 0; i < 4; i++)
-            //{
-            //    pockForest.WoodsAttackHit(pokeWater);
-            //    pokeWater.ElectricAttackHit(pockForest);
-            //    pockForest.Attack(pokeWater, 5);
-            //    pokeWater.Attack(pockForest, 7);
-            //}
+            for (int i = 0; i < 5; i++)
+            {
+                pockForest.WoodsAttackHit(pokeWater);
+                pokeWater.ElectricAttackHit(pockForest);
+                pockForest.Attack(pokeWater, 5);
+                pokeWater.Attack(pockForest, 7);
+            }
 
         }
         #endregion

@@ -25,7 +25,11 @@ namespace Demos.HackerU.HomeWork.Pokemon
         {
             if (LifePower <= 0)
             {
-                Console.WriteLine($"{Name} die");
+                Console.WriteLine($"******{Name} die!*******\n");
+            }
+            else if (otherPokemon.LifePower <= 0)
+            {
+                Console.WriteLine($"******{Name} win!*******\n");
             }
             else
             {

@@ -103,12 +103,14 @@ namespace Demos.HackerU.HomeWork
             pockForest.Attack(pokeWater, 5);
             pokeWater.Attack(pockForest, 7);
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 4; i++)
             {
+
                 pockForest.WoodsAttackHit(pokeWater);
                 pokeWater.ElectricAttackHit(pockForest);
                 pockForest.Attack(pokeWater, 5);
                 pokeWater.Attack(pockForest, 7);
+
             }
 
         }

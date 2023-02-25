@@ -18,7 +18,7 @@ namespace Demos.HackerU.HomeWork.Pokemon
             Id = "No id";
             Name = "No name";
             LifePower = 100;
-            AmmunitionPower = 20;
+            AmmunitionPower = 50;
         }
 
         public Pokemon(string id, string name, int lifePower, int ammunitionPower)
@@ -29,9 +29,17 @@ namespace Demos.HackerU.HomeWork.Pokemon
             AmmunitionPower = ammunitionPower;
         }
 
-        public void Attack(Pokemon OtherPokemon, int ammunitionPower)
+        public void Attack(Pokemon otherPokemon, int ammunitionPower)
         {
-            OtherPokemon.LifePower -= 5;
+            if (AmmunitionPower > 0 || LifePower > 0)
+            {
+                otherPokemon.LifePower -= 5;
+                AmmunitionPower -= ammunitionPower;
+            }
+            else
+            {
+                Console.WriteLine("Pokemon can't fight");
+            }
 
         }
     }

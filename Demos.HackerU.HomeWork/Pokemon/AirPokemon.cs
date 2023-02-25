@@ -21,10 +21,21 @@ namespace Demos.HackerU.HomeWork.Pokemon
             StormPower = stormPower;
         }
 
-        public void StormAttackHit(Pokemon OtherPokemon)
+        public void StormAttackHit(Pokemon otherPokemon)
         {
-
+            if (AmmunitionPower > 0 || LifePower > 0)
+            {
+                otherPokemon.LifePower -= 10;
+                StormPower -= 5;
+                LifePower -= 3;
+            }
+            else
+            {
+                Console.WriteLine("Pokemon can't fight");
+            }
         }
+
+
     }
 }
 

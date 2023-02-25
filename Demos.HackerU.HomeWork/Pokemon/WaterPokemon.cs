@@ -21,8 +21,18 @@ namespace Demos.HackerU.HomeWork.Pokemon
             ElectricPower = electricPower;
         }
 
-        public void ElectricAttackHit(Pokemon OtherPokemon)
+        public void ElectricAttackHit(Pokemon otherPokemon)
         {
+            if (AmmunitionPower > 0 || LifePower > 0)
+            {
+                otherPokemon.LifePower -= 20;
+                ElectricPower -= 8;
+                LifePower -= 4;
+            }
+            else
+            {
+                Console.WriteLine("Pokemon can't fight");
+            }
 
         }
 

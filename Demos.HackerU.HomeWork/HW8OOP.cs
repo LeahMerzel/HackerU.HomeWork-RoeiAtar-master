@@ -4,14 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Demos.HackerU.HomeWork.Inhheritance;
+using Demos.HackerU.HomeWork.Pokemon;
+
 
 namespace Demos.HackerU.HomeWork
 {
     public class HW8OOP
     {
-        public static void Run()
+        #region Q1;
+        public static void Run1()
         {
-            #region Q1;
+
 
             Person p1 = new Person("markez barnea", "Ashkelon", 35, "Roei Atar");
             p1.DisplayInfoToConsole();
@@ -57,8 +60,48 @@ namespace Demos.HackerU.HomeWork
             c2.ShippingAddress = "dfsfsd sdfsd  ";
             c2.DisplayInfoToConsole();
 
-            #endregion
+
 
         }
+        #endregion
+
+        #region Q2;
+        public static void Run2()
+        {
+            WaterPokemon pokeWater = new WaterPokemon();
+            pokeWater.Id = "1001";
+            pokeWater.Name = "Squirtle";
+
+            AirPokemon pokeAir = new AirPokemon();
+            pokeAir.Id = "1002";
+            pokeAir.Name = "Pidgeot";
+
+            pokeAir.StormAttackHit(pokeWater);
+            pokeWater.ElectricAttackHit(pokeAir);
+            pokeAir.Attack(pokeWater, 5);
+            pokeWater.Attack(pokeAir, 7);
+
+            ForestPokemon pockForest = new ForestPokemon();
+            pockForest.Id = "1003";
+            pockForest.Name = "Bulbasaur";
+
+
+            pockForest.WoodsAttackHit(pokeWater);
+            pokeWater.ElectricAttackHit(pockForest);
+            pockForest.Attack(pokeWater, 5);
+            pokeWater.Attack(pockForest, 7);
+
+            for (int i = 0; i < pockForest.LifePower; i++)
+            {
+                pockForest.WoodsAttackHit(pokeWater);
+                pokeWater.ElectricAttackHit(pockForest);
+                pockForest.Attack(pokeWater, 5);
+                pokeWater.Attack(pockForest, 7);
+            }
+
+
+
+        }
+        #endregion
     }
 }

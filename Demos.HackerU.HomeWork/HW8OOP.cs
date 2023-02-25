@@ -25,15 +25,32 @@ namespace Demos.HackerU.HomeWork
 
             Person[] Person = { p1, c1, e1, s1 };
 
-            foreach (Person p in Person)
+            foreach (Person index in Person)
             {
-                p.DisplayInfoToConsole();
-            }
 
+                switch (index)
+                {
+                    case
+                        Employe employe:
+                        employe.DisplayInfoToConsole();
+                        break;
+
+                    case Student student:
+                        student.DisplayInfoToConsole();
+                        break;
+
+                    case Customer customer:
+                        customer.DisplayInfoToConsole();
+                        break;
+                }
+
+            }
+            Console.WriteLine("____________________");
             p1.Age = 10;
             p1.Address = "new address";
             p1.City = "New City";
             p1.DisplayInfoToConsole();
+
             #endregion
 
         }

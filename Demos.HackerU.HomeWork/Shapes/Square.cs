@@ -15,26 +15,26 @@ namespace Demos.HackerU.HomeWork.Shapes
 
         public int Side { get => _side; set => _side = value; }
 
-        public Square(int side, Colors color) : base(color)
+        public Square(int side, ShapeColor color) : base(color)
         {
             _side = side;
         }
 
-        public override void CalculateArea()
+        public override double CalculateArea()
         {
-            Area = (Math.Pow(Side, 2));
+            return (Math.Pow(Side, 2));
         }
 
-        public override void CalculatePerimeter()
+        public override double CalculatePerimeter()
         {
-            Perimeter = Side * 4;
+            return Side * 4;
         }
 
 
 
         public override string ToString()
         {
-            return $"Square:\nSide :{Side}\nArea :{Area}\nPerimeter :{Perimeter}\nColor :{Color}";
+            return $"Side :{Side} " + base.ToString();
         }
     }
 }

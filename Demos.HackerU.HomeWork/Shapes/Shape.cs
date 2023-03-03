@@ -1,57 +1,64 @@
-﻿using Nest;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using static Nest.JoinField;
 
 namespace Demos.HackerU.HomeWork.Shapes
 {
     public abstract class Shape
     {
-        private double _area;
-        private Colors _color;
-        private double _perimeter;
+        //--fields
+        private double _area; //--claculate data
+        private double _perimeter; //--calculate data
+        private ShapeColor _color; //-- info data
 
-        public Shape()
+        /// <summary>
+        /// Empty Ctor
+        /// </summary>
+        public Shape() : this(ShapeColor.White)
         {
             _area = 0;
-            Color = Colors.White;
-            Perimeter = 0;
+            _perimeter = 0;
 
         }
 
-        public Shape(Colors color)
+        /// <summary>
+        /// Full Ctor
+        /// </summary>
+        /// <param name="color"></param>
+        public Shape(ShapeColor color)
         {
-
-            Color = color;
-
-
+            _color = color;
         }
+
+        /// <summary>
+        /// Color Emum
+        /// </summary>
+        public ShapeColor Color { get => _color; set => _color = value; }
+
 
         public double Area
         {
-            get { return _area; }
-            set { _area = value; CalculateArea(); }
+            get { return CalculateArea(); }
         }
 
-
-        public Colors Color { get => _color; set => _color = value; }
         public double Perimeter
         {
-            get { return _perimeter; }
-            set { _perimeter = value; CalculatePerimeter(); }
+            get { return CalculatePerimeter(); }
         }
-        public abstract void CalculateArea();
-        public abstract void CalculatePerimeter();
 
+        public abstract double CalculateArea();
+        public abstract double CalculatePerimeter();
 
-
+        public override string ToString()
+        {
+            var area = string.Format("{0:0.000}", Area);
+            return $" Color:{_color}  | Area={area}";
+        }
     }
 
-    public enum Colors
+    public enum ShapeColor
     {
         Black,
         White,

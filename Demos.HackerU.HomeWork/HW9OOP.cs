@@ -23,6 +23,7 @@ namespace Demos.HackerU.HomeWork
 
             var areaOfCircle = s1.Area;
             Console.WriteLine(s1);
+            Console.WriteLine(s2);
 
 
         }

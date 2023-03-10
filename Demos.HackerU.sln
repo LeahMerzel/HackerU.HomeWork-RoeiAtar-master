@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demos.HackerU", "Demos.Hack
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork", "HomeWork", "{B7CB4032-3EAC-4211-9478-A993E8448A2D}"
 	ProjectSection(SolutionItems) = preProject
+		HW10.png = HW10.png
 		HW_01.txt = HW_01.txt
 		HW_02.txt = HW_02.txt
 		HW_03.txt = HW_03.txt
@@ -16,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork", "HomeWork", "{B7
 		HW_07.txt = HW_07.txt
 		HW_08.txt = HW_08.txt
 		HW_09.jpg = HW_09.jpg
+		HW_11.txt = HW_11.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demos.HackerU.HomeWork", "Demos.HackerU.HomeWork\Demos.HackerU.HomeWork.csproj", "{A793DE91-0776-42C3-BFEE-938888D77F0F}"

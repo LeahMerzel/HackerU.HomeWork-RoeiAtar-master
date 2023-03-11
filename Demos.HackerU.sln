@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demos.HackerU", "Demos.Hack
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork", "HomeWork", "{B7CB4032-3EAC-4211-9478-A993E8448A2D}"
 	ProjectSection(SolutionItems) = preProject
+		GPTTargil.txt = GPTTargil.txt
 		HW10.png = HW10.png
 		HW_01.txt = HW_01.txt
 		HW_02.txt = HW_02.txt

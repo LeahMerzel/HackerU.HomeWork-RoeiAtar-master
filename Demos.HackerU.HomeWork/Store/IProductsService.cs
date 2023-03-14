@@ -11,6 +11,7 @@ namespace Demos.HackerU.HomeWork.Store
         void AddNewCategory(string categoryName, int categoryParentId);
         void AddNewProduct(string name, decimal price, bool isinstock, int categoryId);
         void AddNewProducts(StoreProduct[] products);
+        void AddNewCategories(StoreCategory[] categories);
         void RemoveProduct(int productId);
         void UpdateProduct(int productId, StoreProduct newProductInfo);
         StoreProduct FindProductById(int productId);

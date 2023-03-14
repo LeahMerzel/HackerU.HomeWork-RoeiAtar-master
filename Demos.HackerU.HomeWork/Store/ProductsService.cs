@@ -21,7 +21,8 @@ namespace Demos.HackerU.HomeWork.Store
         /// </summary>
         private ProductsService()
         {
-
+            _categories = new List<StoreCategory>();
+            _products = new List<StoreProduct>();
         }
         public static IProductsService GetInstance()
         {
@@ -48,6 +49,11 @@ namespace Demos.HackerU.HomeWork.Store
         {
             _products.AddRange(products);
 
+        }
+
+        public void AddNewCategories(StoreCategory[] categories)
+        {
+            _categories.AddRange(categories);
         }
 
         public StoreProduct FindProductByName(string productname)

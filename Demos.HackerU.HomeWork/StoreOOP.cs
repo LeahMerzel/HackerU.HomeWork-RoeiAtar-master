@@ -41,9 +41,11 @@ namespace Demos.HackerU.HomeWork
             StoreCategory[] storeCategories = { s1, s2, s3, s4, s5, s6, s7, s8, s9 };
             obj.AddNewCategories(storeCategories);
 
+            Console.WriteLine("find Product by Name");
             var name = obj.FindProductByName("iPhone 14 pro Max");
             Console.WriteLine(name + "\n");
 
+            Console.WriteLine("get all products");
             var producs1 = obj.GetAllProducts();
             producs1.ForEach(producs => Console.WriteLine(producs));
 

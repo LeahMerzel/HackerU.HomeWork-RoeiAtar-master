@@ -25,7 +25,7 @@ namespace Demos.HackerU.HomeWork.Store
 
         public StoreCategory(string name) : this(name, 0) { } // set parentcategoryId = 0 
 
-        public StoreCategory() : this("", 0) { } // set parentcategoryId = 0 
+        public StoreCategory() : this("No Name", 0) { } // set parentcategoryId = 0 
 
         public override string ToString()
         {

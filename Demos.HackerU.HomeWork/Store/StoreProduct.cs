@@ -64,7 +64,7 @@ namespace Demos.HackerU.HomeWork.Store
 
         public override string ToString()
         {
-            return $"Id :{Id}, Name :{Name}, Price :{Price} ,Isinstock :{Isinstock} ,CategoryId :{CategoryId}";
+            return $"Id :{Id}, Name :{Name}, Price :{Price} ,Isinstock :{Isinstock} ,CategoryId :{CategoryId}, PrefixId :{PrefixId}";
         }
 
     }

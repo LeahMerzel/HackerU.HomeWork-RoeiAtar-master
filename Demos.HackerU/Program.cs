@@ -41,7 +41,8 @@ namespace Demos.HackerU
             //--WAIT FOR USER PRESS ANY KEY--
             //HW11.Run();
 
-            BankOOP.Run();
+            //BankOOP.Run();
+            StoreOOP.Run();
             Console.ReadKey();
         }
 

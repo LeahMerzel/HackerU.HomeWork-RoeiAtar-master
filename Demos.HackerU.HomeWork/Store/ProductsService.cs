@@ -107,10 +107,11 @@ namespace Demos.HackerU.HomeWork.Store
 
         public List<StoreCategory> GetAllTopLevelCategories()
         {
-            //List<StoreCategory> newCategories = new List<StoreCategory>();
+
 
             List<StoreCategory> newCategories = _categories.FindAll(c => c.ParentCatogoryId == 0);
 
+            //List<StoreCategory> newCategories = new List<StoreCategory>();
             //foreach (StoreCategory storeCategory in _categories)
             //{
             //    if (storeCategory.ParentCatogoryId == 0)
@@ -124,9 +125,10 @@ namespace Demos.HackerU.HomeWork.Store
 
         public List<StoreProduct> GetProductsCategory(int categoryId)
         {
-            //List<StoreProduct> newProducts = new List<StoreProduct>();
+
             List<StoreProduct> newProducts = _products.FindAll(p => p.CategoryId == categoryId);
 
+            //List<StoreProduct> newProducts = new List<StoreProduct>();
             //foreach (StoreProduct storeProduct in _products)
             //{
             //    if (storeProduct.CategoryId == categoryId)
@@ -139,22 +141,20 @@ namespace Demos.HackerU.HomeWork.Store
 
         public List<StoreCategory> GetSubCategories(int parentCategoryID)
         {
-            List<StoreCategory> newCategories = _categories.FindAll(c => c.ParentCatogoryId == parentCategoryID);
+            List<StoreCategory> newCategories = _categories.FindAll(c => c.ParentCatogoryId > parentCategoryID);
 
             return newCategories;
         }
 
         public void RemoveAllProductsOfCategory(int categoryId)
         {
-
-            foreach (StoreProduct product in _products)
+            for (int i = _products.Count - 1; i >= 0; i--)
             {
-                if (product.CategoryId == categoryId)
+                if (_products[i].CategoryId == categoryId)
                 {
-                    _products.Remove(product);
+                    _products.RemoveAt(i);
                 }
             }
-
         }
 
         public void RemoveProduct(int productId)

@@ -62,6 +62,34 @@ namespace Demos.HackerU.HomeWork
             var producs4 = obj.GetAllTopLevelCategories();
             producs4.ForEach(producs => Console.WriteLine(producs));
 
+            Console.WriteLine("");
+            Console.WriteLine("Product by category");
+            var producs5 = obj.GetProductsCategory(4);
+            producs5.ForEach(producs => Console.WriteLine(producs));
+
+            Console.WriteLine("");
+            Console.WriteLine("sub categories by Parent Catogory Id");
+            var producs6 = obj.GetSubCategories(0);
+            producs6.ForEach(producs => Console.WriteLine(producs));
+
+            Console.WriteLine("");
+            Console.WriteLine("Remove all producs by Catogory Id");
+            obj.RemoveAllProductsOfCategory(4);
+            producs1.ForEach(producs => Console.WriteLine(producs));
+
+            Console.WriteLine("");
+            Console.WriteLine("Remove product by Id");
+            obj.RemoveProduct(5);
+            producs1.ForEach(producs => Console.WriteLine(producs));
+
+            Console.WriteLine("");
+            //save to file;
+            obj.SaveAllProductsByCategory(5);
+
+            Console.WriteLine("");
+            Console.WriteLine("Update Product and id same");
+            obj.UpdateProduct(6, p1);
+            producs1.ForEach(producs => Console.WriteLine(producs));
         }
     }
 }

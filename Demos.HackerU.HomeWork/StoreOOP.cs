@@ -50,12 +50,12 @@ namespace Demos.HackerU.HomeWork
             producs1.ForEach(producs => Console.WriteLine(producs));
 
             Console.WriteLine("");
-            Console.WriteLine("sorted producs by price");
+            Console.WriteLine("sorted products by price");
             var producs2 = obj.GetAllProductsByPrice(100, 300);
             producs2.ForEach(producs => Console.WriteLine(producs));
 
             Console.WriteLine("");
-            Console.WriteLine("sorted producs by price depended id");
+            Console.WriteLine("sorted products by price depended id");
             var producs3 = obj.GetAllProductsByPrice(4, 100, 6000);
             producs3.ForEach(producs => Console.WriteLine(producs));
 
@@ -75,7 +75,7 @@ namespace Demos.HackerU.HomeWork
             producs6.ForEach(producs => Console.WriteLine(producs));
 
             Console.WriteLine("");
-            Console.WriteLine("Remove all producs by Catogory Id");
+            Console.WriteLine("Remove all products by Catogory Id");
             obj.RemoveAllProductsOfCategory(4);
             producs1.ForEach(producs => Console.WriteLine(producs));
 

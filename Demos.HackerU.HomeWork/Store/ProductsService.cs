@@ -68,6 +68,7 @@ namespace Demos.HackerU.HomeWork.Store
         {
             StoreProduct Product = _products.Find(p => p.Id == productId);
 
+
             return Product;
         }
 
@@ -141,7 +142,7 @@ namespace Demos.HackerU.HomeWork.Store
 
         public List<StoreCategory> GetSubCategories(int parentCategoryID)
         {
-            List<StoreCategory> newCategories = _categories.FindAll(c => c.ParentCatogoryId > parentCategoryID);
+            List<StoreCategory> newCategories = _categories.FindAll(c => c.ParentCatogoryId == parentCategoryID);
 
             return newCategories;
         }

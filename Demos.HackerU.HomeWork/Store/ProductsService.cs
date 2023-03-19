@@ -112,14 +112,6 @@ namespace Demos.HackerU.HomeWork.Store
 
             List<StoreCategory> newCategories = _categories.FindAll(c => c.ParentCatogoryId == 0);
 
-            //List<StoreCategory> newCategories = new List<StoreCategory>();
-            //foreach (StoreCategory storeCategory in _categories)
-            //{
-            //    if (storeCategory.ParentCatogoryId == 0)
-            //    {
-            //        newCategories.Add(storeCategory);
-            //    }
-            //}
 
             return newCategories;
         }
@@ -129,14 +121,7 @@ namespace Demos.HackerU.HomeWork.Store
 
             List<StoreProduct> newProducts = _products.FindAll(p => p.CategoryId == categoryId);
 
-            //List<StoreProduct> newProducts = new List<StoreProduct>();
-            //foreach (StoreProduct storeProduct in _products)
-            //{
-            //    if (storeProduct.CategoryId == categoryId)
-            //    {
-            //        newProducts.Add(storeProduct);
-            //    }
-            //}
+
             return newProducts;
         }
 
